@@ -29,26 +29,7 @@
 | `main.cpp`             | Консольный интерфейс (интерактив + пакетный CLI-режим) |
 | `build.bat`, `CMakeLists.txt` | Сборка |
 
-## Сборка
-
-**Windows (MSVC):** двойной клик по `build.bat` или из «Developer Command Prompt»:
-
-```bat
-build.bat
-```
-Скрипт сам находит `vcvars64.bat` (VS 2017/2019/2022) и собирает `lora.exe`.
-
-**Вручную (MSVC):**
-```bat
-cl /EHsc /O2 /std:c++17 /utf-8 *.cpp /Fe:lora.exe
-```
-
-**g++ / clang (MinGW, Linux, macOS):**
-```sh
-g++ -O2 -std=c++17 *.cpp -o lora
-```
-
-**CMake:**
+## Сборка CMake:
 ```sh
 cmake -S . -B build && cmake --build build --config Release
 ```
